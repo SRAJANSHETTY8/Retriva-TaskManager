@@ -12,31 +12,31 @@ Users can securely log in, perform semantic document searches using natural lang
 
 ## Login
 
-![Login](frontend\images\login.png)
+![Login](frontend/images/login.png)
 
 ## Register
 
-![Register](frontend\images\create_account.png)
+![Register](frontend/images/create_account.png)
 
 ## Documents
 
-![Documents](frontend\images\uploadedpage.png)
+![Documents](frontend/images/uploadedpage.png)
 
 ## Semantic Search
 
-![Search](frontend\images\chat.png)
+![Search](frontend/images/chat.png)
 
-## Tasks-Admin
+## Tasks (Admin)
 
-![Tasks](frontend\images\taskpageadmin.png)
+![Tasks Admin](frontend/images/taskpageadmin.png)
 
-## Tasks-User
+## Tasks (User)
 
-![Tasks](frontend\images\taskpageuser.png)
+![Tasks User](frontend/images/taskpageuser.png)
 
 ## Analytics
 
-![Analytics](frontend\images\dashaboard.png)
+![Analytics](frontend/images/dashaboard.png)
 
 ---
 
@@ -44,49 +44,49 @@ Users can securely log in, perform semantic document searches using natural lang
 
 ## Authentication
 
-* User Registration
-* JWT Authentication
-* Secure Password Hashing
-* Role-Based Access Control (Admin/User)
+- User Registration
+- JWT Authentication
+- Secure Password Hashing
+- Role-Based Access Control (Admin/User)
 
 ## Document Management
 
-* Upload PDF Documents
-* Upload Text Files
-* Automatic Document Processing
-* Document Listing
-* Delete Documents
+- Upload PDF Documents
+- Upload Text Files
+- Automatic Document Processing
+- Document Listing
+- Delete Documents
 
 ## AI Semantic Search
 
-* Automatic Text Extraction
-* Text Chunking
-* Local Sentence Embeddings
-* FAISS Vector Storage
-* Natural Language Search
-* Similarity-Based Retrieval
+- Automatic Text Extraction
+- Text Chunking
+- Local Sentence Embeddings
+- FAISS Vector Storage
+- Natural Language Search
+- Similarity-Based Retrieval
 
 ## Task Management
 
-* Create Tasks
-* Assign Tasks
-* Update Task Status
-* Filter Tasks
-* View Assigned Tasks
+- Create Tasks
+- Assign Tasks
+- Update Task Status
+- Filter Tasks
+- View Assigned Tasks
 
 ## Activity Logging
 
-* Login Activity
-* Document Upload Logs
-* Search History
-* Task Update Logs
+- Login Activity
+- Document Upload Logs
+- Search History
+- Task Update Logs
 
 ## Analytics
 
-* Total Tasks
-* Completed Tasks
-* Pending Tasks
-* Most Searched Queries
+- Total Tasks
+- Completed Tasks
+- Pending Tasks
+- Most Searched Queries
 
 ---
 
@@ -94,28 +94,34 @@ Users can securely log in, perform semantic document searches using natural lang
 
 ## Backend
 
-* Python 3.10+
-* FastAPI
-* SQLAlchemy
-* MySQL
-* Pydantic
+- Python 3.10+
+- FastAPI
+- SQLAlchemy
+- MySQL
+- Pydantic
+
+## Frontend
+
+- React
+- Vite
+- Axios
 
 ## Authentication
 
-* JWT (python-jose)
-* Passlib (bcrypt)
+- JWT (python-jose)
+- Passlib (bcrypt)
 
 ## AI
 
-* Sentence Transformers
-* FAISS
-* PyPDF
+- Sentence Transformers
+- FAISS
+- PyPDF
 
 ## Tools
 
-* Git
-* GitHub
-* Postman
+- Git
+- GitHub
+- Postman
 
 ---
 
@@ -167,53 +173,53 @@ Analytics Updated
 
 Stores user roles.
 
-* Admin
-* User
+- Admin
+- User
 
 ## User
 
 Stores user information including:
 
-* Name
-* Email
-* Password
-* Role
+- Name
+- Email
+- Password
+- Role
 
 ## Document
 
 Stores uploaded document metadata including:
 
-* Title
-* Filename
-* File Path
-* Uploaded By
+- Title
+- Filename
+- File Path
+- Uploaded By
 
 ## TextChunks
 
 Stores document chunks used for semantic search.
 
-* Document ID
-* Chunk Index
-* Chunk Text
+- Document ID
+- Chunk Index
+- Chunk Text
 
 ## Task
 
 Stores task information including:
 
-* Title
-* Description
-* Status
-* Assigned User
-* Created By
+- Title
+- Description
+- Status
+- Assigned User
+- Created By
 
 ## ActivityLog
 
 Stores user activity including:
 
-* Login
-* Search
-* Document Upload
-* Task Updates
+- Login
+- Search
+- Document Upload
+- Task Updates
 
 ---
 
@@ -222,61 +228,49 @@ Stores user activity including:
 ## Authentication
 
 | Method | Endpoint |
-|--------|----------|
+|---------|----------|
 | POST | /auth/register |
 | POST | /auth/login |
-
----
 
 ## Roles
 
 | Method | Endpoint |
-|--------|----------|
+|---------|----------|
 | GET | /roles |
-
----
 
 ## Documents
 
 | Method | Endpoint |
-|--------|----------|
+|---------|----------|
 | GET | /documents |
 | GET | /documents/{id} |
 | POST | /documents |
 | DELETE | /documents/{id} |
 
----
-
 ## Semantic Search
 
 | Method | Endpoint |
-|--------|----------|
+|---------|----------|
 | GET | /search |
-
----
 
 ## Tasks
 
 | Method | Endpoint |
-|--------|----------|
+|---------|----------|
 | POST | /tasks |
 | GET | /tasks |
 | PUT | /tasks/{id} |
 
----
-
 ## Activity Logs
 
 | Method | Endpoint |
-|--------|----------|
+|---------|----------|
 | GET | /activity-logs |
-
----
 
 ## Analytics
 
 | Method | Endpoint |
-|--------|----------|
+|---------|----------|
 | GET | /analytics |
 
 ---
@@ -286,19 +280,15 @@ Stores user activity including:
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/RetrivaAI.git
-cd RetrivaAI
+git clone https://github.com/SRAJANSHETTY8/Retriva-TaskManager.git
+cd Retriva-TaskManager
 ```
-
----
 
 ## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
-
----
 
 ## Activate Virtual Environment
 
@@ -314,26 +304,20 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
----
-
 ## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
 ## Create Environment Variables
 
-Create a `.env` file.
+Create a `.env` file inside the **backend** folder.
 
 ```env
 DATABASE_URL=mysql+pymysql://root:password@localhost:3306/retriva
 SECRET_KEY=your_secret_key
 ```
-
----
 
 ## Create Database
 
@@ -341,11 +325,10 @@ SECRET_KEY=your_secret_key
 CREATE DATABASE retriva;
 ```
 
----
-
-## Run Application
+## Run Backend
 
 ```bash
+cd backend
 uvicorn main:app --reload
 ```
 
@@ -359,6 +342,20 @@ Swagger Documentation
 
 ```
 http://127.0.0.1:8000/docs
+```
+
+## Run Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend URL
+
+```
+http://localhost:5173
 ```
 
 ---
@@ -405,53 +402,56 @@ curl http://127.0.0.1:8000/analytics
 
 # Assumptions
 
-* Only administrators can upload documents.
-* Only administrators can create tasks.
-* Users can update only tasks assigned to them.
-* Semantic search is performed locally using Sentence Transformers.
-* FAISS stores document embeddings in memory.
-* PDF and TXT files are supported.
-* JWT authentication secures protected endpoints.
-* Activity logs record major user actions.
+- Only administrators can upload documents.
+- Only administrators can create tasks.
+- Users can update only tasks assigned to them.
+- Semantic search is performed locally using Sentence Transformers.
+- FAISS stores document embeddings locally.
+- PDF and TXT files are supported.
+- JWT authentication secures protected endpoints.
+- Activity logs record major user actions.
 
 ---
 
 # Project Structure
 
 ```text
-RetrivaAI/
+Retriva-TaskManager
 │
 ├── backend/
-│   ├── main.py
 │   ├── auth.py
 │   ├── database.py
 │   ├── embeddings.py
+│   ├── main.py
 │   ├── model.py
 │   ├── schema.py
-│   ├── requirements.txt
-│   ├── uploads/
-│   └── .env
+│   └── ...
 │
 ├── frontend/
+│   ├── src/
+│   ├── images/
+│   ├── package.json
+│   └── ...
 │
-├── screenshots/
-│
-├── README.md
-└── .gitignore
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-#Features
+# Features Summary
 
-* AI Semantic Search
-* FAISS Vector Database
-* Sentence Transformers
-* JWT Authentication
-* Role-Based Access Control
-* Activity Logging
-* RESTful API
-* MySQL Integration
-* Swagger API Documentation
+- AI Semantic Search
+- FAISS Vector Database
+- Sentence Transformers
+- JWT Authentication
+- Role-Based Access Control
+- Task Management
+- Activity Logging
+- Analytics Dashboard
+- RESTful API
+- MySQL Integration
+- Swagger API Documentation
 
 ---
